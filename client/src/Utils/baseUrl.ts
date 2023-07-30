@@ -1,3 +1,3 @@
 export const getBaseUrl = ()=>{
-  return "https://proxy-server-sgv4.onrender.com"
+  return "https://orkes-task.vercel.app"
 }

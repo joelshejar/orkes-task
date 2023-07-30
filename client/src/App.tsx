@@ -1,25 +1,30 @@
-import { useEffect } from 'react'
+import React,{ useEffect,useState } from 'react'
 import './App.css'
+
 import { getFeedData } from './APIs/getFeedData'
 
 function App() {
 
+  const [postList,setPostList] = useState<[]>([])
+
   useEffect(()=>{
     getFeedData(1)
       .then((res:any)=>{
-        console.log(res)
-        if(res) console.log(res)
+        if(res) setPostList(res.nodes)
       })
       .catch((err)=>console.log(err))
   },[])
 
+  console.log(postList)
+
   return (
-    <>
-      
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className='container'>
+      <section>
+        <article>
+          
+        </article>
+      </section>
+    </div>
   )
 }
 
