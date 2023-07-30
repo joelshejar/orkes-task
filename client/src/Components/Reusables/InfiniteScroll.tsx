@@ -5,7 +5,7 @@ const InfiniteScroll = ({
   isLazyLoading = "list-item",
 }: {
   handlerFunc: () => void;
-  isLazyLoading: string;
+  isLazyLoading?: string;
 }) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const elementRef = useRef<any>();
